@@ -1,16 +1,26 @@
 <?php require_once 'app/views/templates/header.php'; ?>
-<div class="container-fluid">
-  <h2>Create Reminder</h2>
-  <form action="/reminders/create" method="POST">
-    <div class="form-group">
-      <div class="mb-3">
-        <label for="subject" class="form-label">Subject</label>
-        <input type="text" class="form-control" placeholder="Create a reminder" name="subject" required>
-      </div>
 
-
+<div class="container my-4">
+    <div class="text-center">
+        <h1 class="display-4">Create Reminder</h1>
+        <hr>
     </div>
-    <button type="submit" class="btn btn-dark">Create</button>
-  </form>
+    <form action="/reminders/create" method="POST">
+        <div class="mb-3">
+            <label for="subject" class="form-label text-dark">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Create a reminder" name="subject" required>
+        </div>
+        <div class="mb-3">
+            <a href="/reminders" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
 </div>
-<?php require_once 'app/views/templates/footer.php'; ?>
+<footer class="footer mt-auto py-4">
+    <div class="container text-center">
+        <span class="text-muted">Your footer content here</span>
+    </div>
+</footer>
+
+
+
