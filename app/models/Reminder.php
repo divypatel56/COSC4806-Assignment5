@@ -21,6 +21,15 @@ class Reminder {
       $statement->execute();
       return $statement->fetch(PDO::FETCH_ASSOC);
   }
+
+//For Admin Report
+    public function viewAll_reminders() {
+        $db = db_connect();
+        $statement = $db->query("SELECT reminders.subject, reminders.created_at, users.username FROM reminders JOIN users ON reminders.user_id = users.id");
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    
     // Method to create a new reminder
   public function create_reminder($user_id, $subject) {
       $db = db_connect();

@@ -8,7 +8,15 @@ class Reports extends Controller {
             exit();
         }
 
-        $this->view('reports/index');
+        $reminder = $this->model('Reminder');
+        $user = $this->model('User');
+
+        // View all reminders
+        $allReminders = $reminder->viewAll_reminders();
+
+        $this->view('reports/index', [
+            'allReminders' => $allReminders
+        ]);
 
         
     }

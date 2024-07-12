@@ -9,4 +9,40 @@
             </div>
         </div>
     </div>
+  
+    <div class="row">
+      <!-- View All Reminders Section -->
+      <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header bg-dark bg-gradient text-white">
+              <h2>All Reminders</h2>
+            </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table table-bordered table-hover">
+                      <thead class="thead-dark">
+                          <tr>
+                              <th>Username</th>
+                              <th>Subject</th>
+                              <th>Created At</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <?php foreach ($data['allReminders'] as $reminder): ?>
+                              <tr>
+                                  
+                                  <td><?php echo htmlspecialchars($reminder['username']); ?></td>
+                                  <td><?php echo htmlspecialchars($reminder['subject']); ?></td>
+                                  <td><?php echo htmlspecialchars($reminder['created_at']); ?></td>
+                              </tr>
+                          <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>    
+    
+</div>
 

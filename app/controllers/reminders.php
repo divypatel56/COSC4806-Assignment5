@@ -2,6 +2,8 @@
 
 class Reminders extends Controller {
 
+   
+
   // Index method to show the list of reminders
   public function index() {
       $reminder = $this->model('Reminder');
