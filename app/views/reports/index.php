@@ -1,6 +1,13 @@
 <?php require_once 'app/views/templates/header.php' ?>
 
-<div class="container mt-5">
+<div class="container mt-3">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" ><a href="/reminders">Reminders</a></li>
+            <li class="breadcrumb-item" active aria-current="page">Dashboard</a></li>
+        </ol>
+    </nav>
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
