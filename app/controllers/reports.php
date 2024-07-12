@@ -15,9 +15,13 @@ class Reports extends Controller {
         $allReminders = $reminder->viewAll_reminders();
         // Who has the most reminders
         $mostReminders = $reminder->most_reminders();
+        // How many total logins by username
+        $totalLogins = $user->get_totallogins();
 
         $this->view('reports/index', [
-            'allReminders' => $allReminders,'mostReminders' => $mostReminders
+            'allReminders' => $allReminders,
+            'mostReminders' => $mostReminders,
+            'totalLogins' => $totalLogins
         ]);
 
         

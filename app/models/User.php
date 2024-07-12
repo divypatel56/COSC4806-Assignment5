@@ -17,6 +17,13 @@ class User {
     $rows = $statement->fetch(PDO::FETCH_ASSOC);
     return $rows;
   }
+    //Get total logins
+    public function get_totallogins() {
+        $db = db_connect();
+        $statement = $db->query("SELECT username, COUNT(*) as total_logins FROM log WHERE attempt = 'good' GROUP BY username");
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
   // function to get user by username
     public function get_username($username) {
       $db = db_connect();
