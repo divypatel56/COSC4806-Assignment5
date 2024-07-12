@@ -25,8 +25,16 @@ class Reminder {
 //For Admin Report
     public function viewAll_reminders() {
         $db = db_connect();
-        $statement = $db->query("SELECT reminders.subject, reminders.created_at, users.username FROM reminders JOIN users ON reminders.user_id = users.id");
+        $statement = $db->query("SELECT reminders.subject, reminders.created_at, users.username FROM 
+        reminders JOIN users ON reminders.user_id = users.id");
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function most_reminders() {
+        $db = db_connect();
+        $statement = $db->query("SELECT users.username, COUNT(*) as reminder_count FROM reminders JOIN 
+        users ON reminders.user_id = users.id GROUP BY user_id ORDER BY reminder_count DESC LIMIT 1");
+        return $statement->fetch(PDO::FETCH_ASSOC);
     }
 
     

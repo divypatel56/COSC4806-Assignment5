@@ -42,6 +42,22 @@
             </div>
         </div>
     </div>
+      <!-- User with Most Reminders Section -->
+      <div class="col-lg-3 mb-4">
+          <div class="card">
+              <div class="card-header bg-dark bg-gradient text-white">
+                  <h2>User with Most Reminders</h2>
+              </div>
+              <div class="card-body">
+                  <?php if ($data['mostReminders']): ?>
+                      <p><strong>Username:</strong> <?php echo htmlspecialchars($data['mostReminders']['username']); ?></p>
+                      <p><strong>Number of Reminders:</strong> <?php echo htmlspecialchars($data['mostReminders']['reminder_count']); ?></p>
+                  <?php else: ?>
+                      <p>No reminders found.</p>
+                  <?php endif; ?>
+              </div>
+          </div>
+      </div>
     </div>    
     
 </div>

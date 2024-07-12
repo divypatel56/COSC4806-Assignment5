@@ -13,9 +13,11 @@ class Reports extends Controller {
 
         // View all reminders
         $allReminders = $reminder->viewAll_reminders();
+        // Who has the most reminders
+        $mostReminders = $reminder->most_reminders();
 
         $this->view('reports/index', [
-            'allReminders' => $allReminders
+            'allReminders' => $allReminders,'mostReminders' => $mostReminders
         ]);
 
         
