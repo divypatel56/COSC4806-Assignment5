@@ -52,7 +52,7 @@
 
         <div class="col-lg-6 mb-3">
             <div class="card">
-                <div class="card-header bg-success text-white">
+                <div class="card-header bg-dark bg-gradient text-white">
                     <h2>User with Most Reminders</h2>
                 </div>
                 <div class="card-body">
@@ -67,7 +67,7 @@
 
             <div class="card mt-3" style="max-width: 300px;">
                 <div class="card-header bg-dark bg-gradient text-white">
-                    <h2>Reminders by User</h2>
+                    <h2>Reminders Percentage</h2>
                 </div>
                 <div class="card-body">
                     <canvas id="reminderChart" style="max-width: 300px;"></canvas>
@@ -80,7 +80,7 @@
         <!-- Second row: Total Logins by User and Chart for Analysis -->
         <div class="col-lg-6 mb-5">
             <div class="card">
-                <div class="card-header bg-warning text-white">
+                <div class="card-header bg-dark bg-gradient text-white">
                     <h2>Total Logins by User</h2>
                 </div>
                 <div class="card-body">
@@ -109,7 +109,7 @@
         <div class="col-lg-6 mb-3">
             <div class="card" style="max-width: 600px;">
                 <div class="card-header bg-dark bg-gradient text-white">
-                    <h2>Analysis Chart</h2>
+                    <h2>Login Activity</h2>
                 </div>
                 <div class="card-body">
                     <canvas id="loginChart" style="max-width: 600px;"></canvas>
