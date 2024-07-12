@@ -16,11 +16,5 @@
         </div>
     </form>
 </div>
-<footer class="footer mt-auto py-4">
-    <div class="container text-center">
-        <span class="text-muted">Your footer content here</span>
-    </div>
-</footer>
-
-
+    <?php require_once 'app/views/templates/footer.php'; ?>
 

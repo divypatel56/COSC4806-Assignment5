@@ -3,17 +3,16 @@
       <div class="page-header text-center mb-4">
           <h1 class="display-4">Update Reminder</h1>
           <hr>
-      </div>
+        </div>
       <form action="/reminders/update/<?php echo $data['reminder']['id']; ?>" method="post">
           <div class="form-group mb-3">
-              <label for="subject" class="form-label">Subject</label>
-              <input type="text" class="form-control" placeholder="Update reminder" name="subject" value="<?php echo htmlspecialchars($data['reminder']['subject']); ?>" required>
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" placeholder="Update reminder" name="subject" value="<?php echo htmlspecialchars($data['reminder']['subject']); ?>" required>
           </div>
         <a href="/reminders" class="btn btn-secondary">Cancel</a>      
-
-          <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
       </form>
-  </div>
-  <div class="container-fluid">
-      <?php require_once 'app/views/templates/footer.php'; ?>
-  </div>
+    
+  </div>  
+<?php require_once 'app/views/templates/footer.php'; ?>
+
