@@ -16,5 +16,7 @@
         </div>
     </form>
 </div>
+<div class="mt-auto">
     <?php require_once 'app/views/templates/footer.php'; ?>
+</div>
 

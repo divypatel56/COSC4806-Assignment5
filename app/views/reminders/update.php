@@ -14,5 +14,6 @@
       </form>
     
   </div>  
-<?php require_once 'app/views/templates/footer.php'; ?>
-
+<div class="mt-auto">
+    <?php require_once 'app/views/templates/footer.php'; ?>
+</div>
